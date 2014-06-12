@@ -1,15 +1,15 @@
 var chai = require('chai');
 var should = chai.should();
-var BeglobalAPI = require('../lib/beglobal').BeglobalAPI;
+var LanguageCloudAPI = require('../lib/beglobal').LanguageCloudAPI;
 var configs = require('../lib/config.js');
-var beglobal = new BeglobalAPI(configs);
+var lc = new LanguageCloudAPI(configs);
 var utils = require('../lib/utils.js');
 
 describe('Projects', function() {
   var addedProject;
 
   it('should create a new project', function(done) {
-    beglobal.projects.create({
+    lc.projects.create({
       type: 'translationProject',
       from: 'eng',
       to: 'fra',
