@@ -15,7 +15,7 @@
     "type": "MIT",
     "url": "https://github.com/sdl/sdl-languagecloud-api-node/blob/master/LICENSE"
   },
-  "main": "./lib/beglobal.js",
+  "main": "./lib/languagecloud.js",
   "dependencies": {},
   "devDependencies": {
     "mocha": "~1.8.2",
