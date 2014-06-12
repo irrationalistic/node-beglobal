@@ -1,35 +1,37 @@
-node-beglobal
+sdl-languagecloud-api
 =============
 
-A node.js wrapper for [BeGlobal API](https://www.beglobal.com/)
+A node.js wrapper for [SDL Language Cloud Translation API](http://languagecloud.sdl.com/)
 
 ## Installation
 
 You can install it using NPM (Node Package Manager)
 ```
-npm install node-beglobal
+npm install sdl-languagecloud-api
 ```
 Also you can add it as a dependecy in your `package.json` file.
 
 ##Usage
 
-Refer to the [BeGlobal API page](https://www.beglobal.com/developers/) for more information about the API.
+Refer to the [SDL Language Cloud Translation API page](http://languagecloud.sdl.com/translation-api/api-documentation) for more information about the API.
 
 ###Initialize
 ```js
-var BeGlobal = require('node-beglobal');
+var LanguageCloud = require('sdl-languagecloud-api');
 
 //initialize the BeGlobal API
-var beglobal = new BeGlobal.BeglobalAPI({
+var lc = new LanguageCloud.LanguageCloudAPI({
   api_token: 'API_TOKEN'
 });
 ```
 
 ###Translation
 ```js
-beglobal.translations.translate(
-  {text: 'hello', from: 'eng', to: 'fra'},
-  function(err, results) {
+lc.translations.translate({
+  text: 'hello',
+  from: 'eng',
+  to: 'fra'
+  }, function(err, results) {
     if (err) {
       return console.log(err);
     }
@@ -41,8 +43,7 @@ beglobal.translations.translate(
 
 ###Languages
 ```js
-beglobal.languages.all(
-  function(err, results) {
+lc.languages.all(function(err, results) {
     if (err) {
       return console.log(err);
     }
@@ -79,8 +80,7 @@ beglobal.languages.all(
 `GET` all projects
 
 ```js
-beglobal.projects.all(
-  function(err, results) {
+lc.projects.all(function(err, results) {
     if (err) {
       return console.log(err);
     }
@@ -119,9 +119,7 @@ beglobal.projects.all(
 `GET` a project by id
 
 ```js
-beglobal.projects.get(
-  "5176407e132b856177f4c87a",
-  function(err, results) {
+lc.projects.get("5176407e132b856177f4c87a", function(err, results) {
     if (err) {
       return console.log(err);
     }
@@ -156,7 +154,7 @@ beglobal.projects.get(
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Robert Onodi (robert_onodi@yahoo.com)
+Copyright (c) 2014 SDL plc. (http://languagecloud.sdl.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
