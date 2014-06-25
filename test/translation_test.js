@@ -15,7 +15,7 @@ describe('Translations', function() {
     });
   });
 
-  it('should get a translation in html format using `encodeURIComponent`', function(done) {
+  it('should get a translation in html format using `encodeURI`', function(done) {
     lc.translations.translate({
       text: '<html><head></head><body><h1>Hello, how are you?</h1></body></html>',
       from: 'eng',
