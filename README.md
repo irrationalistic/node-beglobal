@@ -19,7 +19,7 @@ Refer to the [SDL Language Cloud Translation API page](http://languagecloud.sdl.
 ```js
 var LanguageCloud = require('sdl-languagecloud-api');
 
-//initialize the BeGlobal API
+//initialize the SDL Language Cloud Translation API
 var lc = new LanguageCloud.LanguageCloudAPI({
   api_token: 'API_TOKEN'
 });
